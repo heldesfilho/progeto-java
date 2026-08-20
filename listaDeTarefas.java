@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class lista {
+public class listaDeTarefas {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         ArrayList<Tarefa> lista=new ArrayList<>();
