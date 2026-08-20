@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class calculadora {
+public class calculadoraSimples {
     public static void main(String[] args) {
         Scanner entrada =new Scanner(System.in);
         System.out.println("qual o primeiro número: ");
