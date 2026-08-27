@@ -1,9 +1,7 @@
 package biblioteca;
 import java.util.Scanner;
-import java.util.ArrayList;
 public class Biblioteca_ge {
     public static void main(String[] args) {
-        ArrayList<Funcionario> biblioteca=new ArrayList<>();
         Scanner entrada =new Scanner(System.in);
         while (true) {
             System.out.println("=======================");
@@ -17,22 +15,29 @@ public class Biblioteca_ge {
         System.out.println("6- SAIR");
         int descrisao=entrada.nextInt();
         entrada.nextLine();
-        if (descrisao==1) {addfun(entrada, biblioteca);}
+        if (descrisao==1) {addfun(entrada);}
         else if(descrisao==2){}
         else if(descrisao==3){}
         else if(descrisao==4){}
         else if(descrisao==5){}
         else if(descrisao==6){break;}
         }}
-    public static void addfun (Scanner entrada, ArrayList<Funcionario>biblioteca) {
+    public static void addfun (Scanner entrada) {
         System.out.println();
         System.out.println("===============");
-        System.out.println("nome:");
+        System.out.println("Nome:");
         String nome = entrada.nextLine();
-        System.out.println("telefone ex xx xxxxx xxxx:");
+        System.out.println("Telefone:");
         String tel =entrada.nextLine();
-        Funcionario teste =new Funcionario(nome, tel);
-        biblioteca.add(teste);
+        System.out.println("Função:");
+        String fun =entrada.nextLine();
+        System.out.println("Email:");
+        String email =entrada.nextLine();
+        Funcionario teste =new Funcionario(nome, tel, fun, email);
+        FuncionarioDAO dao=new FuncionarioDAO();
+        dao.salvar(teste);
     }
-
+    public static void remover(Scanner entrada) {
+        
+    }
 }
