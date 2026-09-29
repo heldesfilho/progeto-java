@@ -9,4 +9,5 @@ Cada diretório neste repositório representa um projeto isolado com seu própri
 
 * biblioteca: Sistema de gerenciamento de biblioteca com integração a banco de dados MySQL para persistência e manipulação de registros.
 * lista_de_tarefa: Aplicação simples de gerenciamento de tarefas desenvolvida para aplicar conceitos e estruturas fundamentais da linguagem Java.
-
+* estoque: Aplicação Java em linhas de comando para cadastro de produtos e categorias, controle de estoque, vendas e análises.
+Funcionando como um simples gerenciador de loja com conexão ao MySQL.
