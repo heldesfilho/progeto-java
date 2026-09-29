@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class Conexao {
     public static Connection conectar() {
-        String url = "jdbc:mysql://localhost:3306/biblioteca?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8";
-        String usuario = "root";
-        String senha = "SOMBRA-mf10"; 
+        String url = "DB_URL";
+        String usuario = "DB_USER";
+        String senha = "DB_PASSWORD"; 
 
         try {
             return DriverManager.getConnection(url, usuario, senha);
