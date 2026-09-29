@@ -9,23 +9,19 @@ public class Movimentacao {
 
     private int id;
     private int produtoId;
-    private String produtoNome;          // preenchido só nas consultas (JOIN)
+    private String produtoNome;          
     private TipoMovimentacao tipo;
     private int quantidade;
-    private LocalDateTime dataHora;      // definida pelo banco ao inserir
+    private LocalDateTime dataHora;      
     private String observacao;
 
-    public Movimentacao() {
-    }
-
-    // Construtor para uma movimentação nova
+    public Movimentacao() {}
     public Movimentacao(int produtoId, TipoMovimentacao tipo, int quantidade, String observacao) {
         this.produtoId = produtoId;
         this.tipo = tipo;
         this.quantidade = quantidade;
         this.observacao = observacao;
     }
-
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

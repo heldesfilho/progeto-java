@@ -63,8 +63,6 @@ public class CategoriaDAO {
         }
     }
 
-    // Busca pelo nome exato. O MySQL ignora maiúsculas/minúsculas e acentos nessa comparação
-    // (por causa do collation utf8mb4_unicode_ci), então "limpeza" e "Limpeza" são o mesmo nome.
     public Categoria buscarPorNome(String nome) throws SQLException {
         String sql = "SELECT id, nome FROM categorias WHERE nome = ?";
 
@@ -91,7 +89,6 @@ public class CategoriaDAO {
         return lista;
     }
 
-    // Conta TODOS os produtos da categoria, inclusive os desativados.
     public int contarProdutos(int categoriaId) throws SQLException {
         String sql = "SELECT COUNT(*) FROM produtos WHERE categoria_id = ?";
 

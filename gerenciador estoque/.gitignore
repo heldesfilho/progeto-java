@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+*.class
+*.log
+out/
+build/
+target/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.db
+*.sqlite
+*.sqlite3

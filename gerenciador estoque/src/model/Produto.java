@@ -7,18 +7,16 @@ public class Produto {
     private int id;
     private String codigo;
     private String nome;
-    private Integer categoriaId;              // pode ser null (sem categoria)
-    private String categoriaNome;             // preenchido só nas consultas (JOIN)
+    private Integer categoriaId;              
+    private String categoriaNome;            
     private BigDecimal precoCusto = BigDecimal.ZERO;
     private BigDecimal precoVenda = BigDecimal.ZERO;
-    private int quantidadeAtual;              // só muda via movimentação (próxima etapa)
+    private int quantidadeAtual;              
     private int estoqueMinimo;
     private boolean ativo = true;
 
-    public Produto() {
-    }
+    public Produto() {}
 
-    // Construtor para um produto novo (ainda sem id e com saldo zero)
     public Produto(String codigo, String nome, Integer categoriaId,
                    BigDecimal precoCusto, BigDecimal precoVenda, int estoqueMinimo) {
         this.codigo = codigo;
